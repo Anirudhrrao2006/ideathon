@@ -1,0 +1,85 @@
+
+{
+  "project_name": "NOVA - Adaptive Learning Platform for Preventive Substance Awareness",
+  "version": "1.0.0",
+  "description": "A multimodal, offline-first adaptive learning platform using optimization algorithms and storytelling to raise awareness against substance abuse among students aged 13-19.",
+  
+  "references": [
+    {
+      "id": "REF001",
+      "title": "WHO Plug Out Programme",
+      "url": "https://www.who.int/initiatives/plug-out-programme",
+      "description": "Global awareness initiative on tobacco and substance use prevention among adolescents."
+    },
+    {
+      "id": "REF002",
+      "title": "National Adolescent Health Programme (RKSK)",
+      "url": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1020&lid=391",
+      "description": "Government of India’s initiative for adolescent health education and behavior change."
+    },
+    {
+      "id": "REF003",
+      "title": "Nasha Mukt Bharat Abhiyaan (NMBA)",
+      "url": "https://socialjustice.gov.in/schemes/2020",
+      "description": "Ministry of Social Justice and Empowerment programme for drug demand reduction through community outreach."
+    },
+    {
+      "id": "REF004",
+      "title": "Digital India & DIKSHA Platform",
+      "url": "https://diksha.gov.in/",
+      "description": "National e-learning platform integrating technology-enabled learning across Indian schools."
+    },
+    {
+      "id": "REF005",
+      "title": "World Health Organization - Global School Health Initiative",
+      "url": "https://www.who.int/health-topics/school-health",
+      "description": "Framework for integrating health promotion into schools through interactive education."
+    },
+    {
+      "id": "REF006",
+      "title": "NCERT Adolescence Education Programme (AEP)",
+      "url": "https://ncert.nic.in/dee/aep.php",
+      "description": "NCERT’s curriculum-based approach to life skills, values, and awareness for school students."
+    },
+    {
+      "id": "REF007",
+      "title": "National Education Policy (NEP 2020)",
+      "url": "https://www.education.gov.in/sites/upload_files/mhrd/files/NEP_Final_English_0.pdf",
+      "description": "Policy framework emphasizing experiential learning, digital education, and mental health awareness."
+    },
+    {
+      "id": "REF008",
+      "title": "Indian Council of Medical Research (ICMR) - Adolescent Risk Behavior Studies",
+      "url": "https://main.icmr.nic.in/",
+      "description": "Research data supporting adolescent behavioral patterns related to addiction and preventive health."
+    },
+    {
+      "id": "REF009",
+      "title": "UNICEF India - Life Skills and Substance Use Prevention",
+      "url": "https://www.unicef.org/india/",
+      "description": "Youth-focused awareness and digital health education for preventive behavioral change."
+    },
+    {
+      "id": "REF010",
+      "title": "World Health Organization - Mental Health and Substance Use Division",
+      "url": "https://www.who.int/teams/mental-health-and-substance-use",
+      "description": "WHO division promoting integrated prevention and early intervention strategies for adolescents."
+    }
+  ],
+
+  "api_metadata": {
+    "generated_at": "2025-10-25T11:45:00+05:30",
+    "author": "Rohan Carlo",
+    "organization": "NOVA Hackathon Research Team",
+    "contact_email": "teamnova@researchlab.in",
+    "license": "CC-BY-NC 4.0",
+    "tags": [
+      "SubstanceAwareness",
+      "Education",
+      "AI",
+      "Accessibility",
+      "HealthTech",
+      "India"
+    ]
+  }
+}
