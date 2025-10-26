@@ -1,0 +1,31 @@
+# NOVA Adaptive Learning Optimization
+
+## 🧠 Project Overview
+NOVA is an adaptive learning and classification framework** designed to enhance optimization and decision-making using adaptive algorithms and object-oriented principles.  
+This project includes code implementations, reference materials, and a conceptual audio explanation (POCQ) that outlines the core mechanics and rationale behind the NOVA algorithm.
+
+---
+
+## 📁 Repository Contents
+
+| File | Description |
+|------|--------------|
+| **NOVA_Adaptive_Learning_Optimization.py** | Core script implementing the NOVA Adaptive Learning Optimization algorithm. Handles model training, learning rate adaptation, and performance tuning. |
+| **NOVA_OOP_Adaptive_Classifier.py** | Object-oriented version of the NOVA classifier. Provides modularity, scalability, and integration with machine learning workflows. |
+| **Nova algorithm explanation POCQ.wav** | Audio explanation (Proof of Concept Quickcast) describing the theory, purpose, and design choices behind the NOVA algorithm. |
+| **Reference_for_slide.txt** | Text reference notes intended for presentation slides, summarizing key points and academic sources. |
+| **Table_for_impact_assesment.png** | Visual representation of the algorithm’s impact assessment — includes performance metrics and comparative data. |
+| **reference file for code.txt** | Contains references, citations, and supporting materials relevant to the implementation of the NOVA algorithms. |
+
+---
+
+## ⚙️ Installation & Requirements
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/yourusername/NOVA-Adaptive-Learning.git
+   cd NOVA-Adaptive-Learning
+2.python NOVA_Adaptive_Learning_Optimization.py
+3.python NOVA_OOP_Adaptive_Classifier.py
+
+
