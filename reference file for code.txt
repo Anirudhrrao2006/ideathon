@@ -1,0 +1,123 @@
+*Baseline Optimization Algorithm — step-by-step*
+
+1. *Collect inputs (per student, per module):*
+
+   * Engagement time (E), Accuracy (%) (A), Interaction frequency (F), Reflection depth (R), Voice interactions (V).
+
+2. *Normalize/scale inputs if needed:*
+
+   * e.g., convert A to percent (×100), ensure units consistent (minutes, counts, 1–5 scale).
+
+3. *Apply weighted linear model:*
+
+   * Compute learning gain (L = \alpha_1 E + \alpha_2 A + \alpha_3 F + \alpha_4 R + \alpha_5 V).
+   * α coefficients are preset or tuned from pilot data.
+
+4. *Set threshold for adaptive decision:*
+
+   * Compute threshold (e.g., mean or percentile of L across cohort).
+   * Classify each user: Advance if (L \ge) threshold, else Reinforce.
+
+5. *Simulate pre→post effect:*
+
+   * Use (L) to estimate post-score from pre-score (e.g., post = pre + (L / maxL) * gain_range).
+
+6. *Produce outputs:*
+
+   * Per-student L, classification, pre/post scores, % improvement.
+   * Simple visualizations (bar chart of improvements).
+
+---
+
+*Object-Oriented Classification Model — step-by-step*
+
+1. *Define classes and responsibilities:*
+
+   * ParameterSet (stores E,A,F,R,V and computes L).
+   * Subject (module properties, difficulty weight, parameter generator).
+   * Student (holds subjects, records, methods to study/update).
+   * Optimizer (holds α weights, optimize() and classify_stage() methods).
+
+2. *Instantiate objects:*
+
+   * Create Subject objects (e.g., Math, Health) with difficulty modifiers.
+   * Create multiple Student instances (each with own record store).
+   * Create a shared Optimizer instance.
+
+3. *Run study cycle (one iteration = one module/session):*
+
+   * For each student → for each subject:
+
+     * subject.generate_parameters() → returns a ParameterSet.
+     * optimizer.optimize(paramset) → computes L.
+     * optimizer.classify_stage(L) → returns Advance / Reinforce.
+     * Store result in student.records[subject] = {L, stage}.
+
+4. *Repeat for multiple cycles:*
+
+   * Loop N sessions to simulate longitudinal learning; update parameters or weights if modeling adaptation.
+
+5. *Aggregate & persist results:*
+
+   * Build dictionary/JSON of all students × subjects results for analysis or export.
+
+6. *Extendability:*
+
+   * Inherit specialized `Optimizer`s, add clustering, adjust α per student cluster, plug in real data sources later.
+
+---
+
+*Impact Assessment Procedure — key pointers*
+
+1. *Define baseline metrics (pre-intervention):*
+
+   * Knowledge score, Attitude score, Behavioral intent score, Reflection depth, Engagement baseline.
+
+2. *Implement pre-assessment:*
+
+   * Administer short quiz and reflection (voice/text) before learning track. Record baseline values.
+
+3. *Run intervention (NOVA modules):*
+
+   * Track E, A, F, R, V per student/session; compute L each session; apply adaptive paths.
+
+4. *Implement post-assessment:*
+
+   * After module set (4–6 weeks), administer same/parallel quiz and reflection. Record post values.
+
+5. *Compute individual-level outcomes:*
+
+   * ΔKnowledge = post_knowledge − pre_knowledge
+   * ΔAttitude, ΔBehaviorIntent similarly
+   * % improvement and absolute scores; learning gain L trends over time.
+
+6. *Aggregate cohort-level analysis:*
+
+   * Mean ΔK, ΔA, ΔB; % classified Advance vs Reinforce; retention rates; sustained engagement (SER).
+
+7. *Identify at-risk users and interventions:*
+
+   * Use classification + low L or falling trend → flag for reinforcement, counselor follow-up.
+
+8. *Visualize & report:*
+
+   * Dashboards with pre/post bars, engagement heatmaps, cohort progress and distribution of classifications.
+
+9. *Validate & tune model:*
+
+   * Compare predicted post gains from model with observed post scores; adjust α weights or threshold to reduce error.
+
+10. *Policy & scale metrics:*
+
+    * Compute adoption rates, offline completion, teacher uptake, and projected population impact (PII) for stakeholders.
+
+---
+
+*Minimal proof-of-concept checklist to demonstrate NOVA*
+
+* Run baseline script → show per-student L, classification, pre/post simulated scores.
+* Run OOP script → show nested student.subject records for 20 students × 3 subjects.
+* Produce simple dashboard/table with: pre mean, post mean, % improvement, % Advance.
+* Show one adaptation example: a student with low L gets Reinforce, after extra module L increases and classification flips.
+
+---
